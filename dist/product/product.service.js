@@ -24,6 +24,18 @@ let ProductService = class ProductService {
     async all() {
         return this.productRepository.find();
     }
+    async create(data) {
+        return this.productRepository.save(data);
+    }
+    async get(id) {
+        return this.productRepository.findOne(id);
+    }
+    async update(id, data) {
+        return this.productRepository.update(id, data);
+    }
+    async delete(id) {
+        return this.productRepository.delete(id);
+    }
 };
 ProductService = __decorate([
     common_1.Injectable(),
